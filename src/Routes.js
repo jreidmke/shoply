@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom';
 import ProductList from './ProductList';
 import ProductFilter from './ProductFilter';
+import Cart from './Cart';
 import data from './data.json';
 
 function Routes({dogs}) {
@@ -13,6 +14,9 @@ function Routes({dogs}) {
     <Switch>
       <Route exact path="/">
         <ProductList />
+      </Route>
+      <Route exact path="/">
+        <Cart/>
       </Route>
       <Route path="/products/:id">
         <ProductFilter products={data.products}/>
