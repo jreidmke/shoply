@@ -1,10 +1,12 @@
 import './Product.css';
+import { Link } from "react-router-dom";
 
 const Product = ({name, price, description, image_url, handleRemove, handleAdd, id, numInCart}) => {
+
     return(
         <div id='productContainer'>
             <img src={image_url} alt='Product Image' id='productImg'/>
-            <h1>{name.toUpperCase()}</h1>
+            <h1><Link to={`/products/${id}`}>{name.toUpperCase()}</Link></h1>
             <h3>Price: {price}</h3>
             <h4>{description}</h4>
             <button onClick={()=>handleRemove(id)}>Remove From Cart</button>

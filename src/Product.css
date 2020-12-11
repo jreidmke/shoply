@@ -2,6 +2,11 @@
     margin-top: 20px;
     height: 20%;
     width: 20%;
+    opacity: .4;
+}
+
+#productImg:hover {
+    opacity: 1;
 }
 
 #productContainer {
