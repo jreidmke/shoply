@@ -15,13 +15,13 @@ function Routes({dogs}) {
       <Route exact path="/">
         <ProductList />
       </Route>
-      <Route exact path="/">
+      <Route exact path="/cart">
         <Cart/>
       </Route>
       <Route path="/products/:id">
         <ProductFilter products={data.products}/>
       </Route>
-      <Redirect to="/dogs" />
+      <Redirect to="/" />
     </Switch>
   );
 }
