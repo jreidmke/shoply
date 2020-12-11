@@ -1,6 +1,6 @@
 import './Product.css';
 
-const Product = ({name, price, description, image_url, handleRemove, handleAdd, id}) => {
+const Product = ({name, price, description, image_url, handleRemove, handleAdd, id, numInCart}) => {
     return(
         <div id='productContainer'>
             <img src={image_url} alt='Product Image' id='productImg'/>
@@ -9,6 +9,7 @@ const Product = ({name, price, description, image_url, handleRemove, handleAdd, 
             <h6>{description}</h6>
             <button onClick={()=>handleRemove(id)}>Remove From Cart</button>
             <button onClick={()=>handleAdd(id)}>Add To Cart</button>
+            <h6>{numInCart}</h6>
         </div>
     )
 }
