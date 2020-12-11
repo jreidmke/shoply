@@ -3,6 +3,7 @@ import './App.css';
 import Product from './Product';
 import data from './data.json';
 import {useState} from 'react';
+import { uuid } from 'uuidv4';
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -12,11 +13,14 @@ function App() {
   }
 
   const removeProduct = (id) => {
-    setCart(cart.filter(p => p.id !== id))
+    let tempCart = cart;
+    tempCart.splice(cart.indexOf(id), 1);
+    setCart(tempCart);
   };
 
   const dP = data.products;
   const productKeys = Object.keys(dP);
+
   const productRender = productKeys.map(key =>
     <Product
     key={key}
@@ -27,6 +31,7 @@ function App() {
     id={key}
     handleAdd={addProduct}
     handleRemove={removeProduct}
+    numInCart={(cart.filter(k => k === key)).length}
     />)
 
   return (
