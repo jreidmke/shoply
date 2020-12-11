@@ -18,8 +18,6 @@ const ProductList = () => {
       const dP = data.products;
       const productKeys = Object.keys(dP);
 
-
-
       const cart = useSelector(state => state.cart);
       const dispatch = useDispatch();
 
@@ -38,7 +36,7 @@ const ProductList = () => {
         handleRemove={removeProduct}
         numInCart={(cart.filter(k => k === key)).length}
         />)
-        
+
         return(
             <div>
                   <h1>Items in Cart: {cart.length}</h1>
