@@ -1,14 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-import ProductList from './ProductList';
-import data from './data.json';
-import {useState} from 'react';
+import Routes from './Routes';
 
 function App() {
 
   return (
     <div className="App">
-      <ProductList/>
+      <Routes/>
     </div>
   );
 }
