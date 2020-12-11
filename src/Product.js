@@ -9,7 +9,7 @@ const Product = ({name, price, description, image_url, handleRemove, handleAdd, 
             <h6>{description}</h6>
             <button onClick={()=>handleRemove(id)}>Remove From Cart</button>
             <button onClick={()=>handleAdd(id)}>Add To Cart</button>
-            <h6>{numInCart}</h6>
+            <h6>Num In Cart:{numInCart}</h6>
         </div>
     )
 }

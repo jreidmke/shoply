@@ -3,7 +3,6 @@ import './App.css';
 import Product from './Product';
 import data from './data.json';
 import {useState} from 'react';
-import { uuid } from 'uuidv4';
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -13,9 +12,8 @@ function App() {
   }
 
   const removeProduct = (id) => {
-    let tempCart = cart;
-    tempCart.splice(cart.indexOf(id), 1);
-    setCart(tempCart);
+    cart.splice(cart.indexOf(id), 1);
+    setCart(cart);
   };
 
   const dP = data.products;
@@ -37,7 +35,6 @@ function App() {
   return (
     <div className="App">
       <h1>Items in Cart: {cart.length}</h1>
-      {console.log(cart)}
       {productRender}
     </div>
   );
