@@ -4,17 +4,18 @@ import {
   Route,
   Redirect
 } from 'react-router-dom';
-import DogList from './ProductList';
-import FilterDogDetails from './FilterDogDetails';
+import ProductList from './ProductList';
+import ProductFilter from './ProductFilter';
+import data from './data.json';
 
 function Routes({dogs}) {
   return (
     <Switch>
-      <Route exact path="/dogs">
-        <DogList dogs={dogs} />
+      <Route exact path="/">
+        <ProductList />
       </Route>
-      <Route path="/dogs/:name">
-        <FilterDogDetails dogs={dogs} />
+      <Route path="/products/:id">
+        <ProductFilter products={data.products}/>
       </Route>
       <Redirect to="/dogs" />
     </Switch>
