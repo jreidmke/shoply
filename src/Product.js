@@ -4,9 +4,9 @@ const Product = ({name, price, description, image_url, handleRemove, handleAdd, 
     return(
         <div id='productContainer'>
             <img src={image_url} alt='Product Image' id='productImg'/>
-            <h3>{name}</h3>
-            <h5>Price: {price}</h5>
-            <h6>{description}</h6>
+            <h1>{name.toUpperCase()}</h1>
+            <h3>Price: {price}</h3>
+            <h4>{description}</h4>
             <button onClick={()=>handleRemove(id)}>Remove From Cart</button>
             <button onClick={()=>handleAdd(id)}>Add To Cart</button>
             <h6>Num In Cart:{numInCart}</h6>

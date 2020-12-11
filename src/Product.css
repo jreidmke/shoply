@@ -1,4 +1,19 @@
 #productImg {
+    margin-top: 20px;
     height: 20%;
     width: 20%;
+}
+
+#productContainer {
+    border: 1px solid black;
+    margin: auto;
+    margin-top: 15px;
+    opacity: .4;
+    width: 50%;
+    background-color: gray;
+}
+
+#productContainer:hover {
+    opacity: 1;
+    background-color: white;
 }
