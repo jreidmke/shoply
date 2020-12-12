@@ -26,7 +26,6 @@ const Cart = () => {
 
         return(
             <div>
-                {console.log(cart)}
                   <h1>Items in Cart: {cart.length}</h1>
                   {cartRender}
             </div>
