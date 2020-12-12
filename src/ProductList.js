@@ -1,6 +1,5 @@
 import Product from './Product';
 import data from './data.json';
-import {useState} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 import { v4 } from 'uuid';
 
@@ -40,7 +39,6 @@ const ProductList = () => {
 
         return(
             <div>
-                  <h1>Items in Cart: {cart.length}</h1>
                   {productRender}
             </div>
         )
