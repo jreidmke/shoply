@@ -2,11 +2,6 @@
     margin-top: 20px;
     height: 20%;
     width: 20%;
-    opacity: .4;
-}
-
-#productImg:hover {
-    opacity: 1;
 }
 
 #productContainer {
@@ -15,7 +10,7 @@
     margin-top: 15px;
     opacity: .4;
     width: 50%;
-    background-color: gray;
+    background-color:lightgrey;
 }
 
 #productContainer:hover {
