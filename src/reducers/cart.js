@@ -1,4 +1,4 @@
-import {splicer} from './helpers';
+import {splicer} from './../helpers';
 
 const INITIAL_STATE = { cart: [] };
 
@@ -14,3 +14,5 @@ function cart(state=INITIAL_STATE, action) {
             return state;
     }
 }
+
+export default cart;

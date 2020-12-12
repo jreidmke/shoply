@@ -5,7 +5,7 @@ function splicer(arr, id) {
     return arr;
 }
 
-function total(cart) {
+function total(cart = []) {
     const priceArray = cart.map(code => data.products[code].price);
     if(!priceArray) {
         return 0;

@@ -19,12 +19,13 @@ const ProductList = () => {
       const dP = data.products;
       const productKeys = Object.keys(dP);
 
-      const cart = useSelector(state => state.cart);
+      const cart = useSelector(state => state.cart.cart);
+      console.log(cart);
       const dispatch = useDispatch();
 
       // const addProduct = (newItem) => dispatch({ type: 'ADD_TO_CART', payload: newItem});
       // const removeProduct = (id) => dispatch({type: 'REMOVE_FROM_CART', id})
-      
+
       const addProduct = (newItem) => dispatch(add_to_cart(newItem));
       const removeProduct = (id) => dispatch(remove_from_cart(id));
 
