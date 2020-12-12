@@ -1,7 +1,7 @@
 import Product from './Product';
-import data from './data.json';
 import {useSelector, useDispatch} from 'react-redux';
 import { v4 } from 'uuid';
+import DiscountForm from './DiscountForm';
 
 const Cart = () => {
     const dP = useSelector(state => state.products.products.products); //gross
@@ -29,6 +29,7 @@ const Cart = () => {
 
         return(
             <div>
+                <DiscountForm/>
                   {cart.length !== 0 ? cartRender : emptyCart}
             </div>
         )
