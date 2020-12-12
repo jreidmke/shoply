@@ -1,6 +1,7 @@
 import Product from './Product';
 import data from './data.json';
 import {useSelector, useDispatch} from 'react-redux';
+import { v4 } from 'uuid';
 
 const Cart = () => {
     const dP = data.products;
@@ -12,7 +13,7 @@ const Cart = () => {
 
     const cartRender = cart.map(key =>
         <Product
-        key={key}
+        key={v4()}
         name={dP[key].name}
         price={dP[key].price}
         description={dP[key].description}
