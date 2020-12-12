@@ -34,10 +34,9 @@ function checkForDiscount() {
     }
 }
 
-function total(cart = [], discount = 0) {
+function sumTotal(cart = [], discount = 0) {
     const priceArray = cart.map(code => data.products[code].price);
     const t = priceArray.reduce((a, b) => parseFloat(a+b), [0]);
-    console.log(t);
     if(checkForDiscount()) {
         return;
     } else {
@@ -48,5 +47,5 @@ function total(cart = [], discount = 0) {
 }
 
 export {splicer};
-export {total};
+export {sumTotal};
 export {checkForDiscount};

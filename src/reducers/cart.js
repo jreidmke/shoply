@@ -1,5 +1,4 @@
 import {splicer} from './../helpers';
-
 const INITIAL_STATE = { cart: [] };
 
 function cart(state=INITIAL_STATE, action) {

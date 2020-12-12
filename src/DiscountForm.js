@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import {total} from './helpers';
+import {sumTotal} from './helpers';
 import {useSelector} from 'react-redux';
 
 const DiscountForm = () => {
@@ -17,7 +17,7 @@ const DiscountForm = () => {
 
     const submit = e => {
         e.preventDefault();
-        total(cart, formData.value);
+        sumTotal(cart, formData.value);
         localStorage.setItem('isDiscounted', true);
     };
 
