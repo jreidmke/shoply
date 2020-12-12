@@ -2,6 +2,7 @@ import Product from './Product';
 import data from './data.json';
 import {useState} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
+import { v4 } from 'uuid';
 
 const ProductList = () => {
       // const [cart, setCart] = useState([]);
@@ -26,7 +27,7 @@ const ProductList = () => {
 
       const productRender = productKeys.map(key =>
         <Product
-        key={key}
+        key={v4()}
         name={dP[key].name}
         price={dP[key].price}
         description={dP[key].description}
