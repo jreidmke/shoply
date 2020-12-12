@@ -1,3 +1,6 @@
+import {splicer} from './helpers';
+
+
 const INITIAL_STATE = { cart: [] };
 
 function rootReducer(state=INITIAL_STATE, action) {
@@ -11,11 +14,6 @@ function rootReducer(state=INITIAL_STATE, action) {
         default:
             return state;
     }
-}
-
-function splicer(arr, id) {
-    arr.splice(arr.indexOf(id), 1);
-    return arr;
 }
 
 export default rootReducer;
