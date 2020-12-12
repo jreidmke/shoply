@@ -4,8 +4,9 @@ import {useSelector, useDispatch} from 'react-redux';
 import { v4 } from 'uuid';
 
 const Cart = () => {
-    const dP = data.products;
-    const cart = useSelector(state => state.cart);
+    const dP = useSelector(state => state.products.products.products); //gross
+
+    const cart = useSelector(state => state.cart.cart);
     const dispatch = useDispatch();
 
     const addProduct = (newItem) => dispatch({ type: 'ADD_TO_CART', payload: newItem});
@@ -24,9 +25,11 @@ const Cart = () => {
         numInCart={(cart.filter(k => k === key)).length}
         />)
 
+    const emptyCart = <h1>YOUR CART IS EMPTY</h1>
+
         return(
             <div>
-                  {cartRender}
+                  {cart.length !== 0 ? cartRender : emptyCart}
             </div>
         )
 }
